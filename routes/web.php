@@ -30,5 +30,15 @@ Route::get('/services', 'PagesController@services');
 Route::get('/login', 'PagesController@login');
 Route::get('/register', 'PagesController@register');
 
+Route::get('/photo-gallery', 'PhotoGalleryController@listPhotos')
+    ->name('gallery.photohome');
+
+
+Route::get('/photo-gallery/add-photo', 'PhotoGalleryController@showPhotoForm')
+    ->name('gallery.add_photo');
+
+Route::post('/photo-gallery/add-photo', 'PhotoGalleryController@SavePhotoForm')
+    ->name('gallery.save_photo');
+
 
 
